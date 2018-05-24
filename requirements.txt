@@ -2,3 +2,4 @@ numpy == 1.14.3
 opencv-python == 3.4.0.12
 scikit-image == 0.13.1
 scipy == 1.1.0
+pymysql == 0.8.1

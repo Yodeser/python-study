@@ -6,16 +6,21 @@ from numpy import random
 import hashlib
 
 
-def generate_code():
-    size = 200
-    ids = random.random_integers(10, 10000, size)
-    ids = [str(i) for i in ids]
+class ActiveCode(object):
+    def __init__(self):
+        pass
 
-    var = hashlib.md5()
-    hashlib.md5()
-    for code in range(0, len(ids)):
-        var.update(ids[code].encode("utf8"))
-        ids[code] = var.hexdigest()
-    return ids
+    @staticmethod
+    def generate_code():
+        size = 200
+        ids = random.random_integers(10, 10000, size)
+        ids = [str(i) for i in ids]
+
+        var = hashlib.md5()
+        hashlib.md5()
+        for code in range(0, len(ids)):
+            var.update(ids[code].encode("utf8"))
+            ids[code] = var.hexdigest()
+        return ids
 
 

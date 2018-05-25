@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # //todo
 # Created 21:16, 2018/5/25 by Yodes Yang
+# About using redis in python3: https://www.cnblogs.com/wang-yc/p/5693288.html
 import redis
 import base64
 from q0001_Generate_activeCode import ActiveCode

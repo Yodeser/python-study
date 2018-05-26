@@ -11,9 +11,7 @@ outputUrl = "../data/0000/favicon_notice.png"
 img = cv2.imread(imgUrl)
 cv2.imshow("img", img)
 
-shape = img.shape
-height = shape[0]
-weight = shape[1]
+(height, weight) = img.shape[0:2]
 
 # 需添加文字的相关属性
 fontStr = "5"

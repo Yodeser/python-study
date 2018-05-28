@@ -25,8 +25,21 @@ class WordsFilter(object):
 
         return result
 
+    def judge_text(self, text):
+        for word in self.words:
+            if str(text).__contains__(word):
+                result = 'Freedom'
+                return result
+
+        result = 'Human Rights'
+        return result
+
 
 if __name__ == '__main__':
     wf = WordsFilter("../data/0011/filtered_words.txt")
     print("程序员: ", wf.judge("程序员"))
     print("程序: ", wf.judge("程序"))
+    print()
+    print("这里真的适合程序员： ", wf.judge_text("这里真的适合程序员"))
+    print("这里真的适合开发程序： ", wf.judge_text("这里真的适合开发程序"))
+

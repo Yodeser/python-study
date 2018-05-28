@@ -7,8 +7,6 @@ import hashlib
 
 
 class ActiveCode(object):
-    def __init__(self):
-        pass
 
     @staticmethod
     def generate_code():
@@ -24,3 +22,6 @@ class ActiveCode(object):
         return ids
 
 
+if __name__ == '__main__':
+    codes = ActiveCode.generate_code()
+    print(codes)

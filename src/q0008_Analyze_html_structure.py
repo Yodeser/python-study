@@ -8,7 +8,8 @@ from bs4 import BeautifulSoup
 class HtmlParser(object):
 
     def __init__(self, target):
-        self.html = BeautifulSoup(requests.get(url=target).content, 'html.parser')
+        self.request = requests.get(url=target)
+        self.html = BeautifulSoup(self.request.content, 'html.parser')
         pass
 
     def body(self):

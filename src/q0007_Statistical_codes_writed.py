@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # //todo
 # Created 15:19, 2018/5/28 by Yodes Yang
+# The '__pycache__' folder in python3: https://blog.csdn.net/index20001/article/details/73501375
 import os
 
 

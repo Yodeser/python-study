@@ -6,3 +6,5 @@ pymysql == 0.8.1
 redis == 2.10.6
 requests == 2.18.4
 beautifulsoup4 == 4.6.0
+Pillow == 5.1.0
+urllib3 == 1.22

@@ -51,7 +51,8 @@ class XmlObject(object):
         return False
 
     # 区分字符串与数字
-    def val(self, char):
+    @staticmethod
+    def val(char):
         if XmlObject.is_number(char):
             return str(char)
         else:
@@ -89,7 +90,7 @@ class XmlObject(object):
             if not is_single:
                 result = result + "["
             for j in range(start, col):
-                result = result + self.val(content[i][j])
+                result = result + XmlObject.val(content[i][j])
                 if j != col - 1:
                     result = result + ", "
                 else:

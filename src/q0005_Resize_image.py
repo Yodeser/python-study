@@ -11,7 +11,7 @@ class ResizeImage(object):
         pass
 
     @staticmethod
-    def load():
+    def load(weight=640, height=1135):
         original_path = "../data/0005/original/"
         modified_path = "../data/0005/modified/"
 
@@ -22,12 +22,12 @@ class ResizeImage(object):
             (h, w, c) = img.shape
 
             # get the zoom size
-            if w > 640:
-                n = 640 / float(w)
-                new_size = (640, int(n * h))
-            elif h > 1135:
-                n = 1135 / float(h)
-                new_size = (int(n * w), 1135)
+            if w > weight:
+                n = weight / float(w)
+                new_size = (weight, int(n * h))
+            elif h > height:
+                n = height / float(h)
+                new_size = (int(n * w), height)
             else:
                 new_size = (w, h)
 
@@ -36,4 +36,5 @@ class ResizeImage(object):
             cv2.waitKey(0)
 
 
-ResizeImage.load()
+if __name__ == '__main__':
+    ResizeImage.load()
